@@ -8,7 +8,7 @@ async function controllaCredenziali() {
     }
 
     // 2. Chiamiamo il server passando lo username e password nell'URL (?username=...)
-    const res = await fetch(`/login?username=${username}&password=&{password}`);
+    const res = await fetch(`/login?username=${username}&password=${password}`);
     const dati = await res.json();
 
     // 3. Mostriamo la risposta del server nella pagina
