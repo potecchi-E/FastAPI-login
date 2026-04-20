@@ -3,8 +3,8 @@ async function controllaCredenziali() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    if (username || password) {
-        return alert("Scrivi un username e password")
+    if (!username || !password) {
+        return alert("Scrivi un username e una password")
     }
 
     // 2. Chiamiamo il server passando lo username e password nell'URL (?username=...)
