@@ -26,11 +26,8 @@ def controlla(username: str = Form(...), password: str = Form(...)):
 
 @app.post("/loginPandas")
 def controlla_password(username: str = Form(...), password: str = Form(...)):
-    risultato = df[
-        (df["username"] == username) &
-        (df["password"] == password)
-    ]
-
+    risultato = df[ (df["username"] == username) & (df["password"] == password) ]
+    
     if not risultato.empty:
         return {"messaggio": 1}
     else:

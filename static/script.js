@@ -18,9 +18,16 @@ async function loggati() {
 
     if (json.messaggio == 1){
         document.getElementById("risultato").innerText = "Accesso effettuato";
+        document.getElementById("username").disabled = true;
+        document.getElementById("password").disabled = true;
+        document.getElementById("bottone").disabled = true;
+        document.getElementById("bottonePandas").disabled = true;
     }
     else {
         document.getElementById("risultato").innerText = "Accesso negato";
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("username").focus();
     }
 }
 
@@ -43,9 +50,16 @@ async function loggatiPandas() {
 
     if (json.messaggio == 1){
         document.getElementById("risultato").innerText = "Accesso effettuato";
+        document.getElementById("username").disabled = true;
+        document.getElementById("password").disabled = true;
+        document.getElementById("bottone").disabled = true;
+        document.getElementById("bottonePandas").disabled = true;
     }
     else {
         document.getElementById("risultato").innerText = "Accesso negato";
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("username").focus();
     }
 }
 
